@@ -1,0 +1,42 @@
+﻿<!--https://stackoverflow.com/questions/34660367/how-to-use-progressbar-in-mvvm-->
+<Window
+    x:Class="ProgressBarTest30.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="clr-namespace:ProgressBarTest30.ViewModels"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d"
+    Title="Valve Calibrator"
+    d:DataContext='{d:DesignInstance {x:Type viewModels:MainWindowViewModel}}'
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="ThreeDBorderWindow"
+    Height="450"
+    Width="800">
+    <Grid>
+        <StackPanel
+            Margin="10,50,10,0"
+            Orientation="Horizontal"
+            Height="30"
+            VerticalAlignment="Top">
+            <Button
+                x:Name="Calibrate"
+                Content="Calibrate"
+                Width="70"
+                Command="{Binding CommandCalibrate}"
+                CommandParameter="{Binding ElementName=ProgressBar}"
+                Height="25"
+                Margin="0"></Button>
+            <telerik:RadProgressBar
+                x:Name="ProgressBar"
+                Value="{Binding CurrentProgress, Mode=TwoWay}"
+                Width="677"
+                Height="25"
+                Margin="0,2"
+                >
+            </telerik:RadProgressBar>
+           
+</StackPanel>
+    </Grid>
+</Window>

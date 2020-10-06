@@ -2,11 +2,11 @@
 // Company:............. J.H. Kelly
 // Department:.......... Virtual Design and Construction (VDC)
 // Website:............. http://www.jhkelly.com
-// Solution:............ Progress Bar Test 30
-// Project:............. Progress Bar Test 30
+// Solution:............ Progress Bar For MVVM
+// Project:............. Main
 // File:................ MainWindow.xaml.cs
-// Last Code Cleanup:... 08/25/2020 @ 2:20 PM Using ReSharper
-// Review Comment:...... // ✓✓ 08/25/2020 - Review Comment:
+// Last Code Cleanup:... 10/06/2020 @ 11:15 AM Using ReSharper
+// Review Comment:...... // ✓✓ 10/06/2020 - Review Comment:
 // ///////////////////////////////////////////////////////////
 
 namespace Main.Views
@@ -22,7 +22,7 @@ namespace Main.Views
         {
             this.InitializeComponent();
 
-           this.DataContext = new MainWindowViewModel();
+            this.DataContext = new MainWindowViewModel();
         }
 
         #endregion

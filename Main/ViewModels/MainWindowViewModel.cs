@@ -98,7 +98,7 @@ namespace Main.ViewModels
                                     if (this.ValvesCalibrated != 0)
                                     {
                                         //This line just slows things down so you can see it remove for production stuff
-                                        System.Threading.Thread.Sleep(100);
+                                        System.Threading.Thread.Sleep(10);
                                        bar.Dispatcher.Invoke(() =>  bar.Value = 100.0 * this.ValvesCalibrated / this.valveModels.Count);
                                     }
                                 }
